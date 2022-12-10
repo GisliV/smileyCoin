@@ -784,6 +784,18 @@ Value getbalance(const Array& params, bool fHelp)
     return ValueFromAmount(nBalance);
 }
 
+Value amIrich(const Array& params, bool fHelp) {
+	if (fHelp || param.size() > 1)
+		throw runtime_error("Something wrong happened....");
+	int bal = getbalance(params, fHelp);
+	string no = "pffff, no way!";
+	string yes = "Wow, you are rich!"
+	if (bal > 1000000000)
+		return yes;
+	else
+		return no;
+}
+
 Value getunconfirmedbalance(const Array &params, bool fHelp)
 {
     if (fHelp || params.size() > 0)
